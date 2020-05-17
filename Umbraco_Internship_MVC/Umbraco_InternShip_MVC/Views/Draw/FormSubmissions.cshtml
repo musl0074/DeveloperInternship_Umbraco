@@ -1,0 +1,32 @@
+﻿@model Umbraco_InternShip_MVC.ViewModel.FormSubmissionsViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Acme Corporation Draw </title>
+</head>
+<body>
+
+    @{
+        <h1 class="mb-5 text-center">Submitted forms</h1>
+
+        for (int i = 0; i < Model._userDraws.Count; i++)
+        {
+            <div class="row mt-3">
+                <div class="col-2">
+                    @Model._userDraws[i].
+                </div>
+                <div class="col-6">
+                    @product.Details
+                </div>
+                <div class="col-2">
+                    @product.Price
+                </div>   
+            </div>
+        }
+
+    }
+</body>
+

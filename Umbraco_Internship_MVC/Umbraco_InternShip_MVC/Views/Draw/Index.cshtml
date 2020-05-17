@@ -1,0 +1,36 @@
+﻿@model SubmissionForm
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Acme Corporation Draw </title>
+</head>
+<body>
+
+    <form asp-controller="Draw", asp-action="Create", method="POST", id="FormDraw">
+        <div class="form-group">
+            <label>First Name</label>
+            <input name="FirstName" class="form-control" id="InputFirstName" placeholder="Enter First Name", value="UmbracoInternShipTest">
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input name="LastName" class="form-control" id="InputLastName" placeholder="Enter Last Name", value="UmbracoInternShipTest">
+        </div>
+        <div class="form-group">
+            <label>Email Address</label>
+            <input name="EmailAddress" class="form-control" id="InputEmailAddress" placeholder="name@example.com", value="UmbracoInternShipTest@Test.com">
+        </div>
+        <div class="form-group">
+            <label>Product Serial Number</label>
+            <input name="SerialNumber" class="form-control" id="InputSerialNumberValue" placeholder="Example: 99ec6431-f1d1-46f9-b817-09b3084cca31">
+        </div>
+        <div>
+            <input type="date" name="Age" value="1995-01-01" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</body>
+
