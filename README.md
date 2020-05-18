@@ -49,3 +49,14 @@ From the dropdown select Umbraco_Internship_MVC
 A pop up will appear asking you to accept SSL certificate - Click yes
 
 Then you can run the program by clicking green play button
+
+#### Using Command Line prompt
+
+Open CMD or your desired Command prompt, and CD into your destination folder. 
+run the command
+```
+dotnet run
+```
+![dotnetrun](https://user-images.githubusercontent.com/43537820/82262183-bc1abb00-9960-11ea-974a-0af490d8ea5c.PNG)
+
+you then open your desired Browser and enter what is written in "Now Listening On"
