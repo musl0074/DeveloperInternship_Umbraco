@@ -27,5 +27,10 @@ namespace Umbraco_InternShip_MVC.Models
             SerialNumber = serialNumber;
             Age = age;
         }
+
+        public SubmissionForm()
+        {
+
+        }
     }
 }
