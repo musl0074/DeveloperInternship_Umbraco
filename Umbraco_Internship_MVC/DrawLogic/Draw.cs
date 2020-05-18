@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace Umbraco_InternShip_MVC.Models
+namespace DrawLogic
 {
     public class Draw
     {
@@ -13,6 +12,5 @@ namespace Umbraco_InternShip_MVC.Models
 
         public UserDraw UserDraw { get; set; }
         public SerialNumber SerialNumber { get; set; }
-
     }
 }

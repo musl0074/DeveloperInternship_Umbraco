@@ -11,6 +11,7 @@ using Umbraco_InternShip_MVC.Data;
 using Umbraco_InternShip_MVC.Models;
 using Xunit;
 using Xunit.Sdk;
+using DrawLogic;
 
 namespace XUnitTestProjectUmbracoDeveloperInternship
 {

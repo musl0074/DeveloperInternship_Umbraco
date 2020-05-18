@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DrawLogic\DrawLogic.csproj" />
     <ProjectReference Include="..\Umbraco_InternShip_MVC\Umbraco_InternShip_MVC.csproj" />
   </ItemGroup>
 
