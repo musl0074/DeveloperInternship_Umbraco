@@ -8,9 +8,9 @@ namespace Umbraco_InternShip_MVC.Models
 {
     public class SubmissionForm
     {
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only please"), Required]
+        [RegularExpression(@"^[a-zA-Z ]*$", ErrorMessage = "Use letters only please"), Required]
         public string FirstName { get; set; }
-        [RegularExpression(@"^[a-zA-Z]+$", ErrorMessage = "Use letters only please"), Required]
+        [RegularExpression(@"^[a-zA-Z ]*$", ErrorMessage = "Use letters only please"), Required]
         public string LastName { get; set; }
         [Required]
         public string EmailAddress { get; set; }
@@ -18,6 +18,7 @@ namespace Umbraco_InternShip_MVC.Models
         public string SerialNumber { get; set; }
         [Required]
         public DateTime Age { get; set; }
+        public bool Entered { get; set; }
 
         public SubmissionForm(string firstName, string lastName, string emailAddress, string serialNumber, DateTime age)
         {

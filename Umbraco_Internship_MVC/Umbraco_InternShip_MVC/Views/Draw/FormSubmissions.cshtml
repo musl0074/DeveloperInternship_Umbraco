@@ -12,6 +12,30 @@
     @{
         <h1 class="mb-5 text-center">Submitted forms</h1>
 
+        <table class="table">
+            <tr>
+                <td>
+                    ID
+                </td>
+
+                <td>
+                    First name
+                </td>
+
+                <td>
+                    Last name
+                </td>
+
+                <td>
+                    Email address
+                </td>
+
+                <td>
+                    Serial Number used
+                </td>
+            </tr>
+        </table>
+
         for (int i = 0; i < Model._userDraws.Count; i++)
         {
             <table class="table">
@@ -19,24 +43,22 @@
                     <td>
                         @Html.DisplayFor(modelItem => modelItem._userDraws[0].Id)
                     </td>
-                    <td>
+                    
                     <td>
                         @Html.DisplayFor(modelItem => modelItem._userDraws[0].FirstName)
                     </td>
+
                     <td>
+
                         @Html.DisplayFor(modelItem => modelItem._userDraws[0].LastName)
                     </td>
+
                     <td>
                         @Html.DisplayFor(modelItem => modelItem._userDraws[0].EmailAddress)
                     </td>
-                    <\td>
+
+                    <td>
                         @Html.DisplayFor(modelItem => modelItem._serialNumbers[i].SerialNumberValue)
-                    </\td>
-                    <td>
-                        @Html.DisplayFor(modelItem => modelItem._serialNumbers[i].IsActive)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => modelItem._serialNumbers[i].AmountUsed)
                     </td>
                 </tr>
             </table>

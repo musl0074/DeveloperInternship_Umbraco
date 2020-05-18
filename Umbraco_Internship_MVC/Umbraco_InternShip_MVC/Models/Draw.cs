@@ -11,7 +11,6 @@ namespace Umbraco_InternShip_MVC.Models
         public int UserDrawId { get; set; }
         public int SerialNumberId { get; set; }
 
-        //Navigation property - anvender naming convention til at finde ude af hvilken entity er associeret. 
         public UserDraw UserDraw { get; set; }
         public SerialNumber SerialNumber { get; set; }
 

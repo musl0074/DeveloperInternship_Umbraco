@@ -19,7 +19,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Draw" asp-action="FormSubmissions">Submitted Forms</a>
+                            <form asp-controller="Draw" asp-action="FormSubmissions" method="post">
+                                <input type="hidden" name="apikey" value="apikey" />
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
                         </li>
                     </ul>
                 </div>

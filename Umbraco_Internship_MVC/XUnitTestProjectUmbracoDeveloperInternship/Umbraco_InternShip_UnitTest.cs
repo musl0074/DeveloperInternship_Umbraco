@@ -43,7 +43,7 @@ namespace XUnitTestProjectUmbracoDeveloperInternship
             //Arrange 
             string FirstName = "MuslimTest";
             string LastName = "MuslimTest";
-            string email = "Email@Test";
+            string email = "MuslimTest@test.dk";
             DateTime age = DateTime.Now.AddYears(-18);
 
             var serialNumber = await _context.SerialNumbers.FirstOrDefaultAsync();
@@ -54,8 +54,11 @@ namespace XUnitTestProjectUmbracoDeveloperInternship
             var result = await _controller.Create(submissionForm);
 
             //Assert
-            var objectResult = Assert.IsType<OkResult>(result);
-            Assert.Equal(200, objectResult.StatusCode);
+            var objectResult = Assert.IsType<ViewResult>(result);
+            Assert.NotNull(objectResult.Model);
+
+            var model = Assert.IsType<SubmissionForm>(objectResult.Model);
+            Assert.True(model.Entered);
         }
 
         [Fact]

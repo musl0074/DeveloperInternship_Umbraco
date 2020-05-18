@@ -34,6 +34,12 @@
             <input type="date" name="Age" value="1995-01-01" />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
+        @{ 
+            if(Model != null && Model.Entered == true)
+            {
+                <label class="text-primary"> Congratulation! You have entered the draw!</label>
+            }
+        }
     </form>
 
 </body>

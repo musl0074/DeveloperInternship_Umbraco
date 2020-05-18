@@ -30,7 +30,6 @@ namespace Umbraco_InternShip_MVC.Controllers
         public async Task<IActionResult> Create(SubmissionForm submissionForm)
         {
             if (!ModelState.IsValid) { return RedirectToAction("Index", submissionForm);}
-
             DateTime minimum = DateTime.Now.AddYears(-18);
 
             //Check age
@@ -63,12 +62,17 @@ namespace Umbraco_InternShip_MVC.Controllers
             }
             await _mvcDrawContext.SaveChangesAsync();
 
-            return Ok();
+            submissionForm.Entered = true;
+            return View("Index", submissionForm);
+            //return RedirectToAction("Index", submissionForm);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> FormSubmissions()
+        [HttpPost]
+        public async Task<IActionResult> FormSubmissions(string apikey)
         {
+            if(apikey != "apikey") { return Unauthorized(); }
+
+
             var draws = await _mvcDrawContext.Draws.ToListAsync();
 
             List<UserDraw> users = new List<UserDraw>();
