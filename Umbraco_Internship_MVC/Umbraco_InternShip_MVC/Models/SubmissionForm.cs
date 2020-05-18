@@ -18,5 +18,14 @@ namespace Umbraco_InternShip_MVC.Models
         public string SerialNumber { get; set; }
         [Required]
         public DateTime Age { get; set; }
+
+        public SubmissionForm(string firstName, string lastName, string emailAddress, string serialNumber, DateTime age)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            EmailAddress = emailAddress;
+            SerialNumber = serialNumber;
+            Age = age;
+        }
     }
 }

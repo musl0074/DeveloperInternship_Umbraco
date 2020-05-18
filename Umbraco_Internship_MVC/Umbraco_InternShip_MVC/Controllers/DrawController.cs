@@ -33,17 +33,18 @@ namespace Umbraco_InternShip_MVC.Controllers
             DateTime minimum = DateTime.Now.AddYears(-18);
 
             //Check age
-            if(minimum < submissionForm.Age) { return BadRequest(); }
+            if(minimum < submissionForm.Age) return BadRequest(new { message = "bad request age under 18" });
+       
             
 
             var serialNumber = await _mvcDrawContext.SerialNumbers.Where(s => s.SerialNumberValue == submissionForm.SerialNumber).FirstOrDefaultAsync();
 
             //Valid serial number?
-            if (serialNumber == null || serialNumber.IsActive == false) { return BadRequest(); }
-              
+            if (serialNumber == null || serialNumber.IsActive == false) { return BadRequest(new { message = "bad request INVALID serial number" }); }
 
-            //Does User Exist?
-            var user = await _mvcDrawContext.Users.Where(u => u.EmailAddress == submissionForm.EmailAddress).FirstOrDefaultAsync();
+
+                //Does User Exist?
+                var user = await _mvcDrawContext.Users.Where(u => u.EmailAddress == submissionForm.EmailAddress).FirstOrDefaultAsync();
 
             if(user == null)
             {
