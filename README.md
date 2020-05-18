@@ -60,3 +60,43 @@ dotnet run
 ![dotnetrun](https://user-images.githubusercontent.com/43537820/82262183-bc1abb00-9960-11ea-974a-0af490d8ea5c.PNG)
 
 you then open your desired Browser and enter what is written in "Now Listening On"
+
+### When playing with the Site
+
+When the site is up running go to your IDE Visual studio
+
+```
+Click on View
+```
+```
+Click on SQL Server Object Explorer
+```
+```
+Click on your LocalDB
+```
+```
+Click on Databases
+```
+```
+Click on MvcDrawContext-1
+```
+```
+Click on tables 
+```
+```
+Right click on dbo.SerialNumber
+```
+```
+Click on view Data
+```
+Then you have 100 serial numbers you can freely use when trying the application. 
+
+
+
+![sqlserver](https://user-images.githubusercontent.com/43537820/82262817-e620ad00-9961-11ea-9d6a-bbfb04ccff6f.png)
+
+![sqlserverview](https://user-images.githubusercontent.com/43537820/82262886-0ea8a700-9962-11ea-86e2-0670a911886e.png)
+
+![laststepview](https://user-images.githubusercontent.com/43537820/82262958-326bed00-9962-11ea-9025-95edf11e3dea.PNG)
+
+I hope you enjoy it.
