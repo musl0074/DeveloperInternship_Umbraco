@@ -22,3 +22,8 @@ Go to https://visualstudio.microsoft.com/downloads/
 ```
 Install the free Community edition. 
 ![VisualStudioDownload](https://user-images.githubusercontent.com/43537820/82260890-5af1e800-995e-11ea-8d39-329f51284ccd.PNG)
+
+Run the installer and choose ASP.NET and web development
+
+![visualstudioinstallerweb](https://user-images.githubusercontent.com/43537820/82261022-942a5800-995e-11ea-8bdf-93095a5ca5e4.png)
+
