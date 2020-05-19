@@ -1,49 +1,44 @@
 ﻿@model DrawLogic.SubmissionForm
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Acme Corporation Draw </title>
-</head>
-<body>
-    <form asp-controller="Draw" , asp-action="Create" , method="POST" , id="FormDraw">
-        <div class="form-group">
-            <label asp-for="FirstName">First Name</label>
-            <input asp-for="FirstName" name="FirstName" class="form-control" id="InputFirstName" placeholder="Enter First Name" , value="UmbracoInternShipTest">
-            <span asp-validation-for="FirstName" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="LastName">Last Name</label>
-            <input asp-for="LastName" name="LastName" class="form-control" id="InputLastName" placeholder="Enter Last Name" , value="UmbracoInternShipTest">
-            <span asp-validation-for="LastName" class="text-danger"></span>
+@{
+    ViewData["Title"] = "Index";
+}
 
-        </div>
-        <div class="form-group">
-            <label asp-for="EmailAddress">Email Address</label>
-            <input asp-for="EmailAddress" name="EmailAddress" class="form-control" id="InputEmailAddress" placeholder="name@example.com" , value="UmbracoInternShipTest@Test.com">
-            <span asp-validation-for="EmailAddress" class="text-danger"></span>
-        </div>
-        <div class="form-group">
-            <label asp-for="SerialNumber">Product Serial Number</label>
-            <input asp-for="SerialNumber" name="SerialNumber" class="form-control" id="InputSerialNumberValue" placeholder="Example: 99ec6431-f1d1-46f9-b817-09b3084cca31">
-            <span asp-validation-for="SerialNumber" class="text-danger"></span>
-        </div>
-        <div>
-            <input type="date" name="Age" value="1995-01-01" />
-        </div>
-        <p></p>
-        <button type="submit" class="btn btn-primary">Enter Draw</button>
-        @{ 
-            if(Model != null && Model.Entered == true)
-            {
-                <label class="text-primary"> Congratulation! You have entered the draw!</label>
-            }
+<form asp-controller="Draw" , asp-action="Create" , method="POST" , id="FormDraw">
+    <div class="form-group">
+        <label asp-for="FirstName">First Name</label>
+        <input asp-for="FirstName" name="FirstName" class="form-control" id="InputFirstName" placeholder="Enter First Name" , value="UmbracoInternShipTest">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName">Last Name</label>
+        <input asp-for="LastName" name="LastName" class="form-control" id="InputLastName" placeholder="Enter Last Name" , value="UmbracoInternShipTest">
+        <span asp-validation-for="LastName" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="EmailAddress">Email Address</label>
+        <input asp-for="EmailAddress" name="EmailAddress" class="form-control" id="InputEmailAddress" placeholder="name@example.com" , value="UmbracoInternShipTest@Test.com">
+        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SerialNumber">Product Serial Number</label>
+        <input asp-for="SerialNumber" name="SerialNumber" class="form-control" id="InputSerialNumberValue" placeholder="Example: 99ec6431-f1d1-46f9-b817-09b3084cca31">
+        <span asp-validation-for="SerialNumber" class="text-danger"></span>
+    </div>
+    <div>
+        <input type="date" name="Age" value="1995-01-01" />
+    </div>
+    <p></p>
+    <button type="submit" class="btn btn-primary">Enter Draw</button>
+    @{
+        if (Model != null && Model.Entered == true)
+        {
+            <label class="text-primary"> Congratulation! You have entered the draw!</label>
         }
-    </form>
+    }
+</form>
 
-</body>
 
 
 @section Scripts {
