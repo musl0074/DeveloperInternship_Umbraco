@@ -1,4 +1,4 @@
-﻿@model Umbraco_InternShip_MVC.ViewModel.FormSubmissionsViewModel
+﻿@model List<DrawLogic.Draw>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,29 +36,29 @@
             </tr>
         </table>
 
-        for (int i = 0; i < Model._userDraws.Count; i++)
+        for (int i = 0; i < Model.Count; i++)
         {
             <table class="table">
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => modelItem._userDraws[i].Id)
+                        @Html.DisplayFor(modelItem => modelItem[i].UserDraw.Id)
                     </td>
                     
                     <td>
-                        @Html.DisplayFor(modelItem => modelItem._userDraws[i].FirstName)
+                        @Html.DisplayFor(modelItem => modelItem[i].UserDraw.FirstName)
                     </td>
 
                     <td>
 
-                        @Html.DisplayFor(modelItem => modelItem._userDraws[i].LastName)
+                        @Html.DisplayFor(modelItem => modelItem[i].UserDraw.LastName)
+                    </td>
+                    <td>
+
+                        @Html.DisplayFor(modelItem => modelItem[i].UserDraw.EmailAddress)
                     </td>
 
                     <td>
-                        @Html.DisplayFor(modelItem => modelItem._userDraws[i].EmailAddress)
-                    </td>
-
-                    <td>
-                        @Html.DisplayFor(modelItem => modelItem._serialNumbers[i].SerialNumberValue)
+                        @Html.DisplayFor(modelItem => modelItem[i].SerialNumber.SerialNumberValue)
                     </td>
                 </tr>
             </table>

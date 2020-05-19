@@ -74,18 +74,19 @@ namespace Umbraco_InternShip_MVC.Controllers
             if(apikey != "apikey") { return Unauthorized(); }
 
 
-            var draws = await _mvcDrawContext.Draws.ToListAsync();
+            var draws = await _mvcDrawContext.Draws.Include(draw => draw.UserDraw).Include(draw => draw.SerialNumber).ToListAsync();
 
             List<UserDraw> users = new List<UserDraw>();
             List<SerialNumber> serialNumbers = new List<SerialNumber>();
 
-            foreach (Draw item in draws)
-            {
-                users.Add(await _mvcDrawContext.Users.Where(u => item.UserDrawId == u.Id).FirstOrDefaultAsync());
-                serialNumbers.Add(await _mvcDrawContext.SerialNumbers.Where(s => item.SerialNumberId == s.Id).FirstOrDefaultAsync());
-            }
+            //foreach (Draw item in draws)
+            //{
+            //    users.Add(await _mvcDrawContext.Users.Where(u => item.UserDrawId == u.Id).FirstOrDefaultAsync());
+            //    serialNumbers.Add(await _mvcDrawContext.SerialNumbers.Where(s => item.SerialNumberId == s.Id).FirstOrDefaultAsync());
+            //}
             
-            return View(new FormSubmissionsViewModel(users, serialNumbers));
+            //return View(new FormSubmissionsViewModel(users, serialNumbers));
+            return View(draws);
         }
     }
 }
