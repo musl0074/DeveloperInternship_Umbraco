@@ -40,7 +40,7 @@ namespace Umbraco_InternShip_MVC.Controllers
 
             var serialNumber = await _mvcDrawContext.SerialNumbers.Where(s => s.SerialNumberValue == submissionForm.SerialNumber).FirstOrDefaultAsync();
 
-            //Valid serial number?
+            //Valid serial number? A part of buisness Logic
             if (serialNumber == null || serialNumber.IsActive == false) { return BadRequest(new { message = "bad request INVALID serial number" }); }
 
 
@@ -76,8 +76,8 @@ namespace Umbraco_InternShip_MVC.Controllers
 
             var draws = await _mvcDrawContext.Draws.Include(draw => draw.UserDraw).Include(draw => draw.SerialNumber).ToListAsync();
 
-            List<UserDraw> users = new List<UserDraw>();
-            List<SerialNumber> serialNumbers = new List<SerialNumber>();
+            //List<UserDraw> users = new List<UserDraw>();
+            //List<SerialNumber> serialNumbers = new List<SerialNumber>();
 
             //foreach (Draw item in draws)
             //{
